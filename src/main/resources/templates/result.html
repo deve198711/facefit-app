@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Skin Type Result</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .result-box {
+            background-color: #222;
+            border-radius: 10px;
+            padding: 30px 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #3B82F6;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .score {
+            margin-top: 20px;
+            color: #ccc;
+        }
+
+        a {
+            color: #60A5FA;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #93C5FD;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+
+</head>
+<body>
+<div class="result-box">
+    <h1>Your Skin Type is:</h1>
+    <h2 th:text="${skinType}">Skin Type</h2>
+
+    <p th:if="${skinType == 'Dry'}">
+        Your skin tends to feel tight and flaky. Use hydrating creams and avoid harsh cleansers.
+    </p>
+    <p th:if="${skinType == 'Normal'}">
+        Your skin is well-balanced — not too dry, not too oily. Maintain this with gentle care.
+    </p>
+    <p th:if="${skinType == 'Combination'}">
+        Your skin is dry in some areas and oily in others. Use targeted skincare for each zone.
+    </p>
+    <p th:if="${skinType == 'Oily'}">
+        Your skin often appears shiny or greasy. Use lightweight, oil-free products and cleanse regularly.
+    </p>
+
+    <!-- Product Recommendations -->
+    <div th:if="${skinType == 'Dry'}">
+        <h3>Recommended Products</h3>
+        <ul>
+            <li><a href="https://amzn.to/4mUyZwt" target="_blank">Nutrient Face Toner for Dry Skin - Anti Aging</a></li>
+            <li><a href="https://amzn.to/4kzNl45" target="_blank">Ultra Emollient Cream Facial Moisturizer for Dry Skin - Vegan, Gluten Free</a></li>
+            <li><a href="https://amzn.to/4kzNl45" target="_blank">Resist Skin Restoring Moisturizer SPF 50</a></li>
+        </ul>
+    </div>
+
+    <div th:if="${skinType == 'Normal'}">
+        <h3>Recommended Products</h3>
+        <ul>
+            <li><a href="https://amzn.to/4mUyZwt" target="_blank">Nutrient Face Toner for All Skin Type - Anti Aging</a></li>
+            <li><a href="https://amzn.to/3SIGjxu" target="_blank">Lightweight moisturizer for All Skin Type</a></li>
+            <li><a href="https://amzn.to/4kzNl45" target="_blank">Resist Skin Restoring Moisturizer SPF 50</a></li>
+        </ul>
+    </div>
+
+    <div th:if="${skinType == 'Combination'}">
+        <h3>Recommended Products</h3>
+        <ul>
+            <li><a href="https://amzn.to/4efe7wl" target="_blank">Skin Balancing Pore-Reducing Face Toner for Combination Skin</a></li>
+            <li><a href="https://amzn.to/43ZFpC3" target="_blank">Oil Free cream - Quick Absorbing Gel Cream (Vitamin E)</a></li>
+            <li><a href="https://amzn.to/4kzNl45" target="_blank">Resist Skin Restoring Moisturizer SPF 50</a></li>
+        </ul>
+    </div>
+
+    <div th:if="${skinType == 'Oily'}">
+        <h3>Recommended Products</h3>
+        <ul>
+            <li><a href="https://amzn.to/4efe7wl" target="_blank">Skin Balancing Pore-Reducing Face Toner for Oily Skin</a></li>
+            <li><a href="https://amzn.to/448QIJe" target="_blank">Clinically Formulated for Oily Skin - Lightweight, Daily Oil Control Face Cream</a></li>
+            <li><a href="https://amzn.to/4kzNl45" target="_blank">Resist Skin Restoring Moisturizer SPF 50</a></li>
+        </ul>
+    </div>
+
+    <div class="score">
+        <p>Total Score: <span th:text="${score}">0</span></p>
+        <p>Your Opinion: <span th:text="${opinion}">-</span></p>
+    </div>
+</div>
+</body>
+</html>
