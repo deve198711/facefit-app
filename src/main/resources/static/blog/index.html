@@ -2,53 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>Blog | FaceFit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FaceFit Blog</title>
+    <meta name="description" content="Read skincare tips and learn more about your skin type at the FaceFit Blog." />
     <style>
         body {
           font-family: Arial, sans-serif;
-          max-width: 800px;
-          margin: 40px auto;
-          padding: 20px;
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 40px 20px;
+          background-color: #f8f9fa;
           color: #333;
         }
+
         h1 {
+          text-align: center;
           color: #2c3e50;
-          font-size: 2rem;
+          margin-bottom: 40px;
         }
-        .blog-list {
-          list-style: none;
-          padding: 0;
+
+        .blog-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 24px;
         }
-        .blog-list li {
-          margin-bottom: 20px;
+
+        .blog-card {
+          background: #fff;
+          padding: 24px;
+          border-radius: 8px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+          transition: transform 0.2s;
         }
-        .blog-list a {
+
+        .blog-card:hover {
+          transform: translateY(-4px);
+        }
+
+        .blog-card h2 {
           font-size: 1.2rem;
-          font-weight: bold;
-          text-decoration: none;
-          color: #3498db;
+          margin-bottom: 12px;
+          color: #007BFF;
         }
-        .blog-list a:hover {
-          text-decoration: underline;
+
+        .blog-card p {
+          font-size: 0.95rem;
+          line-height: 1.4;
+          margin-bottom: 16px;
+        }
+
+        .blog-card a {
+          color: #4caf50;
+          text-decoration: none;
+          font-weight: bold;
         }
 
         @media (max-width: 600px) {
           h1 {
-            font-size: 1.5rem;
-          }
-          .blog-list a {
-            font-size: 1rem;
+            font-size: 1.6rem;
           }
         }
     </style>
 </head>
 <body>
 <h1>Welcome to FaceFit Blog</h1>
-<ul class="blog-list">
-    <li><a href="/blog/choosing-sunscreen.html">How to Choose the Right Sunscreen for Your Skin Type</a></li>
-    <!-- 앞으로 여기에 글 추가하면 됨 -->
-</ul>
+
+<div class="blog-grid">
+    <div class="blog-card">
+        <h2>How to Choose the Right Sunscreen</h2>
+        <p>Confused between chemical and physical sunscreens? Find out which is right for your skin type.</p>
+        <a href="/blog/choosing-sunscreen.html">Read More →</a>
+    </div>
+
+    <!-- 앞으로 여기 추가하면 됨 -->
+    <!--
+    <div class="blog-card">
+      <h2>Title of New Blog Post</h2>
+      <p>Short description of what this blog post is about.</p>
+      <a href="/blog/your-new-post.html">Read More →</a>
+    </div>
+    -->
+</div>
 </body>
 </html>
-
