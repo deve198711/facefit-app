@@ -12,12 +12,19 @@ public class ResultController {
 
     @PostMapping("/result")
     public String processResult(@RequestParam Map<String, String> allParams, Model model) {
+        String opinion = allParams.getOrDefault("q10", "No opinion provided");
         int score = calculateScore(allParams);
-        model.addAttribute("score", score);
-        model.addAttribute("skinType", determineSkinType(score));
-        model.addAttribute("opinion", allParams.getOrDefault("q10", "-"));
+        String skinType = determineSkinType(score);
 
-        return "result"; // templates/result.html 렌더링
+        System.out.println("score: " + score);
+        System.out.println("skinType: " + skinType);
+        System.out.println("opinion: " + opinion);
+
+        model.addAttribute("score", score);
+        model.addAttribute("skinType", skinType);
+        model.addAttribute("opinion", opinion);
+
+        return "result";
     }
 
     private int calculateScore(Map<String, String> params) {
