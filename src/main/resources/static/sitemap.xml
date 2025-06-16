@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://facefit.life/home.html</loc>
+        <loc>https://facefit.life/home</loc>
     </url>
     <url>
-        <loc>https://facefit.life/quiz.html</loc>
+        <loc>https://facefit.life/quiz</loc>
     </url>
     <url>
-        <loc>https://facefit.life/result.html</loc>
+        <loc>https://facefit.life/result</loc>
     </url>
     <url>
         <loc>https://facefit.life/blog/choosing-sunscreen</loc>
     </url>
     <url>
-        <loc>https://facefit.life/blog/expensive-sunscreen.html</loc>
+        <loc>https://facefit.life/blog/expensive-sunscreen</loc>
     </url>
     <url>
-        <loc>https://facefit.life/blog/rice.html</loc>
+        <loc>https://facefit.life/blog/rice</loc>
     </url>
 
 </urlset>
