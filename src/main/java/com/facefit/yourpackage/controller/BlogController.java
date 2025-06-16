@@ -6,6 +6,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class BlogController {
 
+    @GetMapping("/blog")
+    public String showBlogIndex() {
+        return "blog/index";
+    }
+
     @GetMapping("/blog/choosing-sunscreen")
     public String showChoosingSunscreen() {
         return "blog/choosing-sunscreen"; // templates/blog/choosing-sunscreen.html
