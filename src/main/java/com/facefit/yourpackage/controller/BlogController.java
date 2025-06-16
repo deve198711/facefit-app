@@ -7,7 +7,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class BlogController {
 
     @GetMapping("/blog/choosing-sunscreen")
-    public String showBlogPost1() {
-        return "blog-post1"; // templates/blog-post1.html 렌더링
+    public String showChoosingSunscreen() {
+        return "blog/choosing-sunscreen"; // templates/blog/choosing-sunscreen.html
+    }
+
+    @GetMapping("/blog/expensive-sunscreen")
+    public String showExpensiveSunscreen() {
+        return "blog/expensive-sunscreen"; // templates/blog/expensive-sunscreen.html
+    }
+
+    @GetMapping("/blog/rice")
+    public String showRice() {
+        return "blog/rice"; // templates/blog/rice.html
     }
 }
