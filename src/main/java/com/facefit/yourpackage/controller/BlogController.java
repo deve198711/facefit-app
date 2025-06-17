@@ -25,4 +25,9 @@ public class BlogController {
     public String showRice() {
         return "blog/rice"; // templates/blog/rice.html
     }
+
+    @GetMapping("/blog/acne-myth")
+    public String acneMythPage() {
+        return "blog/acne-myth";
+    }
 }
