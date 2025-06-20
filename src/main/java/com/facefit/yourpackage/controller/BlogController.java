@@ -30,4 +30,10 @@ public class BlogController {
     public String acneMythPage() {
         return "blog/acne-myth";
     }
+
+    @GetMapping("/blog/large-pores")
+    public String showLargePoresPage() {
+        return "blog/large-pores";
+    }
+
 }

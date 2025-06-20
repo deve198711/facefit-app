@@ -22,6 +22,12 @@
         <loc>https://facefit.life/blog/acne-myth</loc>
         <lastmod>2025-06-17</lastmod>
     </url>
+    <url>
+        <loc>https://facefit.life/blog/large-pores</loc>
+        <lastmod>2025-06-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 
 
 </urlset>
