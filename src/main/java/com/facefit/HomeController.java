@@ -14,5 +14,9 @@ public class HomeController {
     public String showHomePage() {
         return "home"; // https://facefit.life/home
     }
+    @GetMapping("/policy")
+    public String policyPage() {
+        return "policy";
+    }
 
 }
